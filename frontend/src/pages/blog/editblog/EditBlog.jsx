@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { Button, Upload, Radio } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import { MdTitle } from "react-icons/md";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import TiptapEditor from "../createblog/components/TiptapEditor";
 import useBlogStore from "../../../store/useBlogStore";
 import editBlogImg from "../../../assets/Blogging-cuate.svg";
@@ -126,9 +126,18 @@ const EditBlog = () => {
                 )}
               </div>
 
-              <button type="submit" className="btn rounded-full btn-primary">
-                Update
-              </button>
+              <div className="flex gap-4 justify-end">
+                <button type="submit" className="btn rounded-full btn-primary">
+                  Update
+                </button>
+                <Link to={"/my-blogs"}>
+                  <button
+                    className="btn rounded-full btn-primary btn-outline"
+                  >
+                    Cancel
+                  </button>
+                </Link>
+              </div>
             </Form>
           )}
         </Formik>

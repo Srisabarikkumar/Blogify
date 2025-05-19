@@ -6,7 +6,7 @@ import { UploadOutlined } from "@ant-design/icons";
 import TiptapEditor from "./components/TiptapEditor";
 import { MdTitle } from "react-icons/md";
 import useBlogStore from "../../../store/useBlogStore";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const categoryOptions = ["career", "finance", "travel"];
 
@@ -59,7 +59,11 @@ const CreateBlog = () => {
         >
           {({ errors, touched, getFieldProps, setFieldValue, values }) => (
             <Form className="w-full mx-auto md:mx-20 flex gap-4 flex-col">
-              <img src={createBlogImg} alt="signup" className="h-24 lg:hidden" />
+              <img
+                src={createBlogImg}
+                alt="signup"
+                className="h-24 lg:hidden"
+              />
               <h1 className="text-4xl font-extrabold">Create a Blog</h1>
 
               {/* Cover Image Upload */}
@@ -74,7 +78,9 @@ const CreateBlog = () => {
                     : false
                 }
               >
-                <Button icon={<UploadOutlined />}>Add a cover image (optional)</Button>
+                <Button icon={<UploadOutlined />}>
+                  Add a cover image
+                </Button>
               </Upload>
 
               {/* Title Input */}
@@ -123,10 +129,16 @@ const CreateBlog = () => {
               </div>
 
               {/* Submit */}
-              <button type="submit" className="btn rounded-full btn-primary">
-                Create
-              </button>
-              
+              <div className="flex gap-4 justify-end">
+                <button type="submit" className="btn rounded-full btn-primary">
+                  Create
+                </button>
+                <Link to={"/my-blogs"}>
+                  <button className="btn rounded-full btn-primary btn-outline">
+                    Cancel
+                  </button>
+                </Link>
+              </div>
             </Form>
           )}
         </Formik>
