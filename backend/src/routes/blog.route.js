@@ -2,7 +2,6 @@ import express from "express";
 import {
   createBlog,
   deleteBlogById,
-  filterBlogs,
   getAllBlogs,
   getBlogById,
   getMyBlogs,
@@ -16,7 +15,6 @@ const router = express.Router();
 router.use(protectRoute);
 
 router.get("/", getAllBlogs);
-router.get("", filterBlogs);
 router.post("/", singleUpload, createBlog);
 router.get("/myblogs", getMyBlogs);
 router.get("/:id", getBlogById);

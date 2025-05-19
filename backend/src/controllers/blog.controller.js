@@ -26,15 +26,6 @@ export const getAllBlogs = async (req, res) => {
   }
 };
 
-export const filterBlogs = async (req, res) => {
-  try {
-    const blogs = await Blog.find().sort({ createdAt: -1 });
-    res.status(201).json(blogs);
-  } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
-  }
-};
-
 export const createBlog = async (req, res) => {
   try {
     const { title, category, content } = req.body;
