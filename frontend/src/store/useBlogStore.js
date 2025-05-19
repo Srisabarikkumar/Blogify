@@ -7,19 +7,6 @@ const useBlogStore = create((set, get) => ({
   myBlogs: [],
   blog: null,
   isBlogsLoading: false,
-  // currentUser: null,
-
-  // getBlogs: async () => {
-  //     set({ isBlogsLoading: true });
-  //     try {
-  //         const response = await axiosInstance.get("/blogs");
-  //         set({ blogs: response.data });
-  //     } catch (error) {
-  //         set({ error: error.response?.data?.message });
-  //     } finally {
-  //         set({ isBlogsLoading: false })
-  //     }
-  // },
 
     getBlogs: async (filters = {}) => {
       set({ isBlogsLoading: true });
@@ -43,20 +30,6 @@ const useBlogStore = create((set, get) => ({
         set({ isBlogsLoading: false });
       }
     },
-
-//   getBlogs: async (filters = {}) => {
-//     set({ isBlogsLoading: true });
-//     try {
-//       const response = await axiosInstance.get("/blogs", {
-//         params: filters,
-//       });
-//       set({ blogs: response.data });
-//     } catch (error) {
-//       set({ error: error.response?.data?.message });
-//     } finally {
-//       set({ isBlogsLoading: false });
-//     }
-//   },
 
   createBlog: async (values) => {
     const { blogs } = get();
