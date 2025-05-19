@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar flex top-0 left-0 right-0 justify-between bg-[#ba68c8] fixed backdrop-filter z-50">
-        <Link className="btn btn-ghost text-xl text-white font-mono" to={"/"}>Blog App</Link>
+        <Link className="btn btn-ghost text-xl text-white font-mono" to={"/"}>Blogify</Link>
 
         <div>
           <Link to="/create-blog">
