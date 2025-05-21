@@ -22,20 +22,7 @@ const MyBlogs = () => {
   };
 
   return (
-    <div>
-      <div>
-        <Link to="/create-blog">
-          <button className="btn rounded-full btn-primary btn-outline">
-            Create Blog
-          </button>
-        </Link>
-        <Link to="/my-blogs">
-          <button className="btn rounded-full btn-primary btn-outline">
-            My Blogs
-          </button>
-        </Link>
-      </div>
-
+    <div className="mt-5">
       {myBlogs.length === 0 ? (
         <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row py-20 px-10">
           <div className="flex-1 lg:flex gap-4 items-center justify-center">
