@@ -14,9 +14,9 @@ Blogify is a modern, full-featured blogging platform built with cutting-edge web
 
 ## Features:
 
-- **User Authentication**: Uses clerk platform for authentication.
-- **Realtime chat**: Users can chat in realtime with other users while listening to music.
-- **User Activities**: Users can see the realtime music activities of other users .
+- **User Authentication**: Uses JWT for authentication.
+- **Create Blogs/ Edit Blogs**: Users can create or edit their blogs.
+- **Explore Blogs**: Users can see the blogs listings by various authors.
 - **Responsive Design**: The application is optimized for desktop and mobile devices.
 
 ## Technologies Used:
